@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FDC5921FDB3564BFAD70049 /* Pods_OperationQueuesDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843571B129467353D2769FD8 /* Pods_OperationQueuesDownload.framework */; };
+		846603F1219FB17000C28DBA /* DownloaderKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846603F0219FB17000C28DBA /* DownloaderKits.swift */; };
 		846869CB219D07D500AA9F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846869CA219D07D500AA9F9D /* AppDelegate.swift */; };
 		846869CD219D07D500AA9F9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846869CC219D07D500AA9F9D /* ViewController.swift */; };
 		846869D0219D07D500AA9F9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846869CE219D07D500AA9F9D /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		23ABD203E00CE1BE35920FB3 /* Pods-OperationQueuesDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OperationQueuesDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-OperationQueuesDownload/Pods-OperationQueuesDownload.release.xcconfig"; sourceTree = "<group>"; };
 		5A861F708653EF297580D39B /* Pods-OperationQueuesDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OperationQueuesDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OperationQueuesDownload/Pods-OperationQueuesDownload.debug.xcconfig"; sourceTree = "<group>"; };
 		843571B129467353D2769FD8 /* Pods_OperationQueuesDownload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OperationQueuesDownload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		846603F0219FB17000C28DBA /* DownloaderKits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderKits.swift; sourceTree = "<group>"; };
 		846869C7219D07D500AA9F9D /* OperationQueuesDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationQueuesDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846869CA219D07D500AA9F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846869CC219D07D500AA9F9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				846869F9219D085C00AA9F9D /* Downloader.swift */,
 				846EAC5D219EA871005C00DE /* DownloadConfig.swift */,
+				846603F0219FB17000C28DBA /* DownloaderKits.swift */,
 			);
 			path = OperationQueuesDownloader;
 			sourceTree = "<group>";
@@ -318,11 +321,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OperationQueuesDownload/Pods-OperationQueuesDownload-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846869CD219D07D500AA9F9D /* ViewController.swift in Sources */,
+				846603F1219FB17000C28DBA /* DownloaderKits.swift in Sources */,
 				846EAC5E219EA871005C00DE /* DownloadConfig.swift in Sources */,
 				846869CB219D07D500AA9F9D /* AppDelegate.swift in Sources */,
 				846869FA219D085C00AA9F9D /* Downloader.swift in Sources */,

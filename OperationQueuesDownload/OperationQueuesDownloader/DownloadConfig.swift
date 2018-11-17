@@ -7,8 +7,8 @@
 //
 
 import UIKit
+import CommonCrypto
 
-public let default_locate_path = NSHomeDirectory() + "/Documents" + "/default_download"
 
 class DownloadConfig: NSObject {
         
@@ -18,16 +18,30 @@ class DownloadConfig: NSObject {
     /// 本地保存路径
     private(set) var locatePath: String = default_locate_path
     
+    /// 未设置则默认为 uri.MD5
+    private(set) var fileName: String = ""
+
+    /// 文件类型
+    private(set) var fileType: String?
+    
     //MARK: --- init ---
     /// return DownloadConfig object
     ///
     /// - Parameters:
     ///   - uri: the download url
     ///   - locatePath: the locate path for saving
-    init(_ uri: String, locate: String) {
+    ///   - fileName: the file name
+    ///   - fileType: the file type    eg: abc.mp3     fileName == abc   fileType == mp3
+    init(_ uri: String, locate: String?, fileName: String?, fileType: String?) {
         super.init()
         self.uri = uri
-        self.locatePath = locate
+        self.locatePath = locate ?? default_locate_path
+        self.fileName = fileName ?? uri.md5()
+        self.fileType = fileType
+    }
+    
+    convenience init(_ uri: String, locate: String) {
+        self.init(uri, locate: locate, fileName: nil, fileType: nil)
     }
     
     convenience init(_ uri: String) {
